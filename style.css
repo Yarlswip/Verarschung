@@ -5,6 +5,10 @@ body {
 	text-align: center;
 	background-color: goldenrod;
 }
+
+header {
+	background-color: blue;
+}
 body.page-wiki {
 	background-color: white;
 	color: black;
@@ -20,4 +24,14 @@ header a {
 }
 main {
 	padding: 0cm;
+}
+body.page-index2 {
+	color: white;
+	background-color: black
+}
+
+header {
+	background-color: rgb(6, 1, 46);
+	padding: 1cm;
+
 }
