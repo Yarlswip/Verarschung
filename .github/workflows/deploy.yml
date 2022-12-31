@@ -12,7 +12,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    name: update
-    uses: wei/curl@v1
-    with:
-      args: https://l3p3.de/svr/site-update.txt?site=y4r3
+    steps:
+    - name: update
+      uses: wei/curl@v1
+      with:
+        args: -X POST https://l3p3.de/svr/site-update.txt?site=y4r3
