@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
@@ -14,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: update
-      uses: wei/curl@v1
-      with:
-        args: -X POST https://l3p3.de/svr/site-update.txt?site=y4r3
+      run: |
+        echo "::add-mask::${{ secrets.UPDATE_KEY }}"
+        curl -X POST -d "site=y4r3&key=${{ secrets.UPDATE_KEY }}" https://l3p3.de/svr/site-update.txt
