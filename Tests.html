@@ -3,6 +3,20 @@
 	<head>
 		<title>tests</title>
 		<link rel="stylesheet" href="/style.css">
+		<button id="colorButton">Hell/Dunkel</button>
+
+<script>
+    // JavaScript-Code
+    const colorButton = document.getElementById('colorButton');
+    const colors = ["orange", "black"];
+    let currentColorIndex = 0;
+
+    colorButton.addEventListener('click', () => {
+        document.body.style.backgroundColor = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+    });
+</script>
+
 	</head>
 	<body>
  <h1>Farbwechsel</h1>
