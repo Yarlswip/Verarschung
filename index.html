@@ -3,6 +3,29 @@
 	<head>
 		<title>Y4R3-Y.R</title>
 		<link rel="stylesheet" href="/style.css">
+		<button id="colorButton">Hell/Dunkel</button>
+
+<script>
+    // JavaScript-Code
+    const colorButton = document.getElementById('colorButton');
+    const colors = ["orange", "black"];
+    let currentColorIndex = 0;
+
+    // Versuche, den vorherigen Zustand aus dem Local Storage zu laden
+    const storedColorIndex = localStorage.getItem('currentColorIndex');
+    if (storedColorIndex !== null) {
+        currentColorIndex = parseInt(storedColorIndex);
+        document.body.style.backgroundColor = colors[currentColorIndex];
+    }
+
+    colorButton.addEventListener('click', () => {
+        document.body.style.backgroundColor = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+
+        // Speichere den aktuellen Zustand im Local Storage
+        localStorage.setItem('currentColorIndex', currentColorIndex.toString());
+    });
+</script>
 	</head>
 	<body>
 		
