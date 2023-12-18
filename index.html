@@ -24,6 +24,8 @@
     colorButton.addEventListener('click', () => {
         document.body.style.backgroundColor = colors[currentColorIndex];
         currentColorIndex = (currentColorIndex + 1) % colors.length;
+	    
+   localStorage.setItem('currentColorIndex', currentColorIndex.toString());
     });
 </script>
 		</header>
