@@ -12,12 +12,9 @@
 			<button id="colorButton">Hell/Dunkel</button>
 
 <script>
-    // JavaScript-Code
     const colorButton = document.getElementById('colorButton');
     const colors = ["goldenrod", "#000033"];
     let currentColorIndex = 0;
-
-    // Versuche, den vorherigen Zustand aus dem Local Storage zu laden
     const storedColorIndex = localStorage.getItem('currentColorIndex');
     if (storedColorIndex !== null) {
         currentColorIndex = parseInt(storedColorIndex);
