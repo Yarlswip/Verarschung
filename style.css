@@ -8,7 +8,7 @@ body {
 
 header {
 	background-color: cyan;
-	padding: 5cm;
+	size: 5cm
 }
 body.page-wiki {
 	background-color: white;
