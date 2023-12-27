@@ -4,11 +4,11 @@ body {
 	color: whitesmoke;
 	text-align: center;
 	background-color: goldenrod;
+	margin: 0;
 }
 
 header {
 	background-color: cyan;
-	size: 5cm
 }
 body.page-wiki {
 	background-color: white;
