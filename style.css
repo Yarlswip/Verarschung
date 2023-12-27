@@ -14,23 +14,12 @@ body.page-wiki {
 	background-color: white;
 	color: black;
 	text-align: left;
-	
-}
-header {
-	background-color: cyan;
-	padding: 1cm;
 }
 header a {
 	color: white;
 }
 main {
 	padding: 0cm;
-}
-
-header {
-	background-color: rgb(6, 1, 46);
-	padding: 1cm;
-
 }
 body.page-kurse {
 	background-color: white;
