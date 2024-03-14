@@ -8,51 +8,33 @@
 	<body>
 		
 		<header>
-			<img src=media/icon.png align=middle width=99>
-			<a href="/">Startseite</a>
-			<button id="colorButton">Hell/Dunkel</button>
-<script>
-    const colorButton = document.getElementById('colorButton');
-    const colors = ["goldenrod", "#000033"];
-    let currentColorIndex = 0;
-    const storedColorIndex = localStorage.getItem('currentColorIndex');
-    if (storedColorIndex !== null) {
-        currentColorIndex = parseInt(storedColorIndex);
-        document.body.style.backgroundColor = colors[currentColorIndex];
-    }
-
-    colorButton.addEventListener('click', () => {
-        document.body.style.backgroundColor = colors[currentColorIndex];
-        currentColorIndex = (currentColorIndex + 1) % colors.length;
-	    
-   localStorage.setItem('currentColorIndex', currentColorIndex.toString());
-    });
-</script>
+			<a href="https://youtube.com/@YarslWip"><img src=media/youtube.png alt="Mein YouTube" width=59></a>
+			<a href="https://github.com/enderwip"><img src=media/github.png alt="Mein Github" width=99></a>
 		</header>
 		<main>
 			<hr>
-			<h1>Willkommen zu YarslWip!</h1>
-			<hr>
-			<h2>News</h2>
-			<p>11.02.24: JavaScript tests</p>
+		<div style="position: relative;">
+			<img src="media/icon.png" style="position: absolute; top: -20px; left: 770px;" width="200">
+			<h1>Willkommen</h1>
+			<h1>zu</h1>
+			<h1>YarlsWip!</h1>
 			<hr>
 			<h2>Ich</h2>
 			<p><a href=übermich.html>Über mich</a></p>
-			<p><a href=https://github.com/enderwip>Github</a></p>
-			<p><a href=https://youtube.com/@YarslWip>YouTube</a></p>
+			<p><a href=Pläne.html>Meine Pläne für die Seite</a></p>
 			<hr>
-			<h2>Meine Website</h2>
+			<h2>Meine Projekte</h2>
+			<p><a href=bby.html>Tecnisch geschlossen</a></p>
+			<p><a href=Tests.html>Knöpfen-Tests</a></p>
+			<p><a href=https://yarslwip.l3p3.de/scheisse>Panzer spielchen</a></p>
+			<h3>Schrotthaufen(nicht zu empfehlen)</h3>
 			<p><a href=etwas.html>schlechte Real News</a></p>
 			<p><a href=grüne.html>Grünen Site</a>
-			<p><a href=bby.html>Tecnisch geschlossen</a></p>
 			<p><a href=redemitevan.html>evan (Demo)</a></p>
-			<p><a href=Tests.html>Knöpfen-Tests</a></p>
-			<p><a href=Pläne.html>Meine Pläne für die Seite</a></p>
-			<p><a href=https://yarslwip.l3p3.de/scheisse/>JavaScript tests</a></p>
 			<hr>
-			<h2>Schau auch</h2>
+			<h2>Collegium:</h2>
 			<p><a href=https://l3p3.de>L3P3</a></p>
-			<p><a href=https://soundcloud.com/lennard-p-peschko>L3P3-Musik</a></p>
+			<p><a href=https://www.skhbm.de>Schulle</a></p>
 			<hr>
 		</main>
 		<footer>

@@ -3,12 +3,12 @@ body {
 	background-size: contain;
 	color: whitesmoke;
 	text-align: center;
-	background-color: goldenrod;
+	background-color: rgb(25, 25, 25);
 	margin: 0;
 }
 
 header {
-	background-color: rgb(6,1,46);
+	background-color: rgb(56, 6, 6);
 }
 body.page-bby {
 	background-color: black;
