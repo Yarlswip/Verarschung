@@ -26,3 +26,6 @@ body.page-kurse {
 	text-align: center;
 	color: black;
 }
+	a:link {
+        color: whitesmoke; 
+}
