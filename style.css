@@ -12,6 +12,7 @@ header {
 }
 	a:link {
         color: white; 
+        a:visited { color: white
 }
 body.page-bby {
 	background-color: black;
