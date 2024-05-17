@@ -10,8 +10,8 @@ body {
 header {
 	background-color: rgb(171, 15, 15);
 }
-	a:link, a:visited {
-        color: rgb(208, 52, 52); 
+a:link, a:visited {
+    color: rgb(208, 52, 52); 
 }
 body.page-bby {
 	background-color: black;
