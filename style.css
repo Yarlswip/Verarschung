@@ -31,12 +31,8 @@ body.page-bby {
 .image-container img:hover {
     transform: scale(1.1);
 }
-
-header a {
-	
-}
 main {
-	padding: 0cm;
+	padding: 0;
 }
 body.page-kurse {
 	background-color: white;
