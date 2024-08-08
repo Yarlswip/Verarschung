@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursk Volksrepublik Referendum</title>
+    <style>
+        body {
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soll Kursk Volksrepublik eine freie Staat werden?</h1>
+    <button id="yesButton" onclick="goToNextPage()">Ja</button>
+    <button id="noButton" onclick="removeNoButton()">Nein</button>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "/";
+        }
+
+        function removeNoButton() {
+            var noButton = document.getElementById("noButton");
+            noButton.style.display = "none";
+        }
+    </script>
+</body>
+</html>
