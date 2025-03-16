@@ -6,6 +6,9 @@ body {
 	background-color: rgb(25, 25, 25);
 	margin: 0;
 }
+h1 {
+	font-size: 40px;
+}
 
 header {
 	background-color: rgb(171, 15, 15);
