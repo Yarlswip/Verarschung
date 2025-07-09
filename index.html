@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>YarlsWIP</title>
-		<link rel="stylesheet" href="/style.css">
-		<link rel="icon" href="media/headlogo.png">
-	</head>
-	<body>
-		<header>
-			<a href="https://youtube.com/@YarlsWip"><img src=media/youtube.png alt="Mein YouTube" width=60></a>
-			<a href="https://github.com/Yarlswip"><img src=media/github.png alt="Mein Github" width=110></a>
-			<a href="https://x.com/kiserkaese"><img src=media/twitter.png alt="Mein Twitter" width=60></a>
-		</header>
-		<main style="position: relative;">
-			<hr>
-			<img src="media/logo.png" style="position: absolute; left: 30px; z-index: -1" height="250">
-			<p>&nbsp;</p>
-			<h1 style=>Willkommen<br>zu<br>YarlsWip!</h1>
-			<p>&nbsp;</p>
-			<hr>
-			<h2>Ich</h2>
-			<p><a href=übermich.html>Über mich</a></p>
-			<p><a href=Pläne.html>Meine Pläne für die Seite</a></p>
-			<hr>
-			<h2>Meine Projekte</h2>
-			<p><a href=bby.html>Technisch geschlossen</a></p>
-			<p><a href=Tests.html>Knöpfen-Tests</a></p>
-			<p><a href=https://yarslwip.l3p3.de/scheisse>Panzer spielchen</a></p>
-			<p><a href=Kurskreferendum.html>Free Kursk Volksrepublik</a></p>
-			<h3>Schrotthaufen(nicht zu empfehlen)</h3>
-			<p><a href=etwas.html>Blaue News</a></p>
-			<p><a href=grüne.html>Grünen Seite</a>
-			<p><a href=redemitevan.html>evan (Demo)</a></p>
+<head>
+    <title>YarlsWIP</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="media/headlogo.png">
+    <style>
+        #matrix-text {
+            white-space: pre;
+            border-right: .15em solid currentColor;
+            display: inline-block;
+            overflow: hidden;
+        }
+        .fade-in-image {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+            margin-top: 20px;
+            height: 250px;
+        }
+        .fade-in-image.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://youtube.com/@YarlsWip"><img src="media/youtube.png" alt="Mein YouTube" width="60"></a>
+        <a href="https://github.com/Yarlswip"><img src="media/github.png" alt="Mein Github" width="110"></a>
+        <a href="https://x.com/kiserkaese"><img src="media/twitter.png" alt="Mein Twitter" width="60"></a>
+    </header>
+    <main>
+        <hr>
+        <h1 id="textanim"></h1>
+        <img src="media/logo.png" alt="Logo" class="fade-in-image" id="logo">
+        <hr>
+    </main>
+
+    <script>
+        const text = "Willkommen zu";
+        let i = 0;
+        const speed = 77;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("textanim").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                document.getElementById("logo").classList.add("visible");
+            }
+        }
+        typeWriter();
+    </script>
+			<table align="center">
+				<tr>
+					<td style="padding-right: 40px;">
+						<h2>Ich</h2>
+						<p><a href=übermich.html>Über mich</a></p>
+						<p><a href=Pläne.html>Meine Pläne für die Seite</a></p>
+					</td>
+				  <td>
+					<h2>Meine Projekte</h2>
+					<p><a href="bby.html">Technisch geschlossen</a></p>
+					<p><a href="Tests.html">Knöpfen-Tests</a></p>
+					<p><a href="https://yarslwip.l3p3.de/scheisse">Panzer spielchen</a></p>
+					<p><a href="Kurskreferendum.html">Free Kursk Volksrepublik</a></p>
+				  </td>
+				  <td style="padding-left: 40px;">
+					<h2>Alte Projekte</h2>
+					<p><a href="etwas.html">Blaue News</a></p>
+					<p><a href="grüne.html">Grüne Seite</a></p>
+				  </td>
+				</tr>
+			  </table>
 			<hr>
 			<h2>Collegium:</h2>
 			<p><a href=https://l3p3.de>L3P3</a></p>
-			<p><a href=https://www.skhbm.de>Schulle</a></p>
+			<p><a href=https://www.skhbm.de>Schule</a></p>
 			<hr>
 		</main>
 		<footer>

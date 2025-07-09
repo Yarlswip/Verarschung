@@ -13,6 +13,17 @@ h1 {
 header {
 	background-color: rgb(171, 15, 15);
 }
+#textanim {
+    margin-bottom: 0px;
+    line-height: 1.1;
+}
+
+.fade-in-image {
+    margin-top: 0px;
+	margin-bottom: 0px;
+    height: 250px;
+    display: inline-block;
+}
 a:link, a:visited {
     color: rgb(208, 52, 52); 
 }
