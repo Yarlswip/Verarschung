@@ -42,8 +42,10 @@ a:link, a:visited {
 
 .image-container img {
 	max-width: 60px;
-    transition: transform 0.3s ease;
+	max-height: 60px;
     width: auto;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .image-container img:hover {
