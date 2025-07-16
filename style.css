@@ -11,6 +11,13 @@ h1 {
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
 	background-color: rgb(171, 15, 15);
 }
 #textanim {
@@ -19,31 +26,34 @@ header {
 }
 
 .fade-in-image {
-    margin-top: 0px;
+    margin-top: 50px;
 	margin-bottom: 0px;
     height: 250px;
     display: inline-block;
 }
 a:link, a:visited {
-    color: rgb(208, 52, 52); 
-}
-body.page-bby {
-	background-color: black;
-	color: white;
-	text-align: middle;
+    color: rgb(175, 28, 28); 
 }
 .image-container {
     display: inline-block;
-    overflow: hidden;
+	padding: auto;
+	margin-top: 5px;
 }
 
 .image-container img {
+	max-width: 60px;
     transition: transform 0.3s ease;
-    width: 100%;
+    width: auto;
 }
 
 .image-container img:hover {
     transform: scale(1.1);
+}
+
+body.page-bby {
+	background-color: black;
+	color: white;
+	text-align: middle;
 }
 main {
 	padding: 0;
