@@ -42,25 +42,39 @@
         </header>
     <main>
         <hr>
-        <h1 id="textanim"></h1>
-        <img src="media/logo.png" alt="Logo" class="fade-in-image" id="logo">
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <h1 id="textanim" style="font-size:50px; margin:0;"></h1>
+                <img src="media/logo.png" alt="Logo" class="fade-in-image" id="logo" style="height:250px; margin-left:20px;">
+            </div>
         <hr>
-    <script>
-        const text = "Willkommen zu";
-        let i = 0;
-        const speed = 77;
+            <script>
+                const el = document.getElementById("textanim");
+                const text = "WILLKOMMEN\nZU";
+                let i = 0;
+                const speed = 77;
 
-        function typeWriter() {
-            if (i < text.length) {
-                document.getElementById("textanim").innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            } else {
-                document.getElementById("logo").classList.add("visible");
-            }
-        }
-        typeWriter();
-    </script>
+                function typeWriter() {
+                    if (i < text.length) {
+                    const ch = text.charAt(i++);
+                    el.innerHTML += (ch === "\n") ? "<br>" : ch;
+                    setTimeout(typeWriter, speed);
+                    } else {
+                    document.getElementById("logo").classList.add("visible");
+                    }
+                }
+                typeWriter();
+            </script>
+        <section class="artikel-leiste">
+            <div class="scroll-wrapper">
+                <div id="artikel-container" class="artikel-container">
+                <article class="artikel-card">Noch in Arbeit, alle Projekte sind weiter unten.</article>
+                <article class="artikel-card">Artikel 2</article>
+                <article class="artikel-card">Artikel 3</article>
+                <article class="artikel-card">Artikel 4</article>
+                <article class="artikel-card">Artikel 5</article>
+            </div>
+        </section>
+            <hr>
 			<table align="center">
 				<tr>
 					<td style="padding-right: 40px;">
@@ -77,7 +91,7 @@
 				  </td>
 				  <td style="padding-left: 40px;">
 					<h2>Alte Projekte</h2>
-					<p><a href="etwas.html">Blaue News</a></p>
+					<p><a href="etwas.html">Trinker News</a></p>
 					<p><a href="grüne.html">Grüne Seite</a></p>
 				  </td>
 				</tr>

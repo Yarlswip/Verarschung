@@ -24,6 +24,7 @@ header {
 #textanim {
     margin-bottom: 0px;
     line-height: 1.1;
+	text-align: right;
 }
 
 .fade-in-image {
@@ -51,6 +52,42 @@ a:link, a:visited {
 
 .image-container img:hover {
     transform: scale(1.1);
+}
+
+.artikel-leiste {
+  width: 100%;
+  padding: 1rem;
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.artikel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.artikel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.artikel-card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 150px;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 1px;
 }
 
 body.page-bby {
