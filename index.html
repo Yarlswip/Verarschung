@@ -23,7 +23,12 @@
     </style>
 </head>
     <body>
-        <header>
+        <header class="fixed-header">
+             <div class="image-container">
+                <a href="/">
+                    <img src="media/blacklogo.png" alt="Homepage" height="60px">
+                </a>
+            </div>
             <div class="image-container">
                 <a href="https://youtube.com/@YarlsWip">
                     <img src="media/youtube.png" alt="Mein YouTube" height="60px">
@@ -64,38 +69,28 @@
                 }
                 typeWriter();
             </script>
-        <section class="artikel-leiste">
-            <div class="scroll-wrapper">
-                <div id="artikel-container" class="artikel-container">
-                <article class="artikel-card">Noch in Arbeit, alle Projekte sind weiter unten.</article>
-                <article class="artikel-card">Artikel 2</article>
-                <article class="artikel-card">Artikel 3</article>
-                <article class="artikel-card">Artikel 4</article>
-                <article class="artikel-card">Artikel 5</article>
-            </div>
-        </section>
+            <h3>Die Seite ist noch kürzlich im Arbeit...</h3>
             <hr>
-			<table align="center">
-				<tr>
-					<td style="padding-right: 40px;">
-						<h2>Ich</h2>
-						<p><a href=übermich.html>Über mich</a></p>
-						<p><a href=Pläne.html>Pläne für die Seite</a></p>
-					</td>
-				  <td style="padding-top: 0px;">
-					<h2>Meine Projekte</h2>
-					<p><a href="bby.html">Technisch geschlossen</a></p>
-					<p><a href="Tests.html">Knöpfen-Tests</a></p>
-					<p><a href="https://yarslwip.l3p3.de/scheisse">Panzer spielchen</a></p>
-					<p><a href="Kurskreferendum.html">Free Kursk Volksrepublik</a></p>
-				  </td>
-				  <td style="padding-left: 40px;">
-					<h2>Alte Projekte</h2>
-					<p><a href="etwas.html">Trinker News</a></p>
-					<p><a href="grüne.html">Grüne Seite</a></p>
-				  </td>
-				</tr>
-			  </table>
+        <section class="artikel-leiste">
+                <div id="artikel-container" class="artikel-container" element="scroll-wrapper">
+                <article class="artikel-card">
+                    <a href="artik/websearch.html">
+                            <img src="media/kompass.jpg" alt="Kompass">
+                            <div class="overlay">
+                                <h3>Web-Seiten Navigation</h3>
+                            </div>
+                    </a>
+                </article>
+                <article class="artikel-card">
+                    <a href="übermich.html">
+                            <img src="media/ubermich.jpg" alt="Ich">
+                            <div class="overlay">
+                                <h3>Ich</h3>
+                            </div>
+                    </a>
+                </article>
+                </div>
+        </section>
 			<hr>
 			<h2>Collegium:</h2>
 			<p><a href=https://l3p3.de>L3P3</a></p>

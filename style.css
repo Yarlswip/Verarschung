@@ -12,15 +12,29 @@ h1 {
 
 header {
 	flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-    line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
 	background-color: rgb(171, 15, 15);
 }
+
+.fixed-header {
+  position: fixed;
+  top: 0;      
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid whitesmoke
+}
+
+main {
+  margin-top: 60px;
+}
+
 #textanim {
     margin-bottom: 0px;
     line-height: 1.1;
@@ -79,15 +93,53 @@ a:link, a:visited {
 }
 
 .artikel-card {
-  flex: 0 0 auto;
-  width: 200px;
-  height: 150px;
-  background: gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 1px;
+    position: relative; 
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    flex: 0 0 auto;
+}
+
+.artikel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artikel-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.artikel-card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.artikel-card .image-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 body.page-bby {
