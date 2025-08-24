@@ -38,15 +38,51 @@ main {
 #textanim {
     margin-bottom: 0px;
     line-height: 1.1;
-	text-align: right;
+    text-align: right;
+
+    display: inline-block;
+    opacity: 0;            
+    transform: translateX(-100%);
 }
 
-.fade-in-image {
-    margin-top: 50px;
-	margin-bottom: 0px;
-    height: 250px;
-    display: inline-block;
+.slide-in-text {
+    animation: slideFromLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-image {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  height: 250px;
+  display: inline-block;
+
+  position: relative;
+  opacity: 0;
+  animation: slideFromRight 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 a:link, a:visited {
     color: rgb(175, 28, 28); 
 }

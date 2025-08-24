@@ -4,23 +4,6 @@
     <title>YarlsWIP</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="media/headlogo.png">
-    <style>
-        #matrix-text {
-            white-space: pre;
-            border-right: .15em solid currentColor;
-            display: inline-block;
-            overflow: hidden;
-        }
-        .fade-in-image {
-            opacity: 0;
-            transition: opacity 2s ease-in;
-            margin-top: 20px;
-            height: 250px;
-        }
-        .fade-in-image.visible {
-            opacity: 1;
-        }
-    </style>
 </head>
     <body>
         <header class="fixed-header">
@@ -49,25 +32,30 @@
         <hr>
             <div style="display: flex; align-items: center; justify-content: center;">
                 <h1 id="textanim" style="font-size:50px; margin:0;"></h1>
-                <img src="media/logo.png" alt="Logo" class="fade-in-image" id="logo" style="height:250px; margin-left:20px;">
+                <img src="media/logoleft.png" alt="Logo" class="slide-in-image" id="logo" style="height:250px; margin-left:20px;">
             </div>
         <hr>
             <script>
-                const el = document.getElementById("textanim");
-                const text = "WILLKOMMEN\nZU";
-                let i = 0;
-                const speed = 77;
+            const el = document.getElementById("textanim");
+            const text = "WILLKOMMEN\nZU";
+            let i = 0;
+            const speed = 77;
 
-                function typeWriter() {
-                    if (i < text.length) {
+            function typeWriter() {
+                if (i < text.length) {
                     const ch = text.charAt(i++);
                     el.innerHTML += (ch === "\n") ? "<br>" : ch;
                     setTimeout(typeWriter, speed);
-                    } else {
+                } else {
+                    // Animation starten, sobald Text fertig ist
+                    el.classList.add("slide-in-text");
+
+                    // Logo erscheint
                     document.getElementById("logo").classList.add("visible");
-                    }
                 }
-                typeWriter();
+            }
+
+            typeWriter();
             </script>
         <section class="artikel-leiste">
                 <div id="artikel-container" class="artikel-container" element="scroll-wrapper">
