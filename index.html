@@ -47,10 +47,7 @@
                     el.innerHTML += (ch === "\n") ? "<br>" : ch;
                     setTimeout(typeWriter, speed);
                 } else {
-                    // Animation starten, sobald Text fertig ist
                     el.classList.add("slide-in-text");
-
-                    // Logo erscheint
                     document.getElementById("logo").classList.add("visible");
                 }
             }

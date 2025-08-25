@@ -19,7 +19,7 @@ header {
   padding: 0;
   margin: 0;
   line-height: 1;
-	background-color: rgb(171, 15, 15);
+	background-color: #ff2626;
 }
 
 .fixed-header {
@@ -84,7 +84,7 @@ main {
 }
 
 a:link, a:visited {
-    color: rgb(175, 28, 28); 
+    color: #9c1414; 
 }
 .image-container {
     display: inline-block;
@@ -154,7 +154,7 @@ a:link, a:visited {
     justify-content: center;
     align-items: center;
     color: white;
-    background: rgba(0, 0, 0, 0.4);
+    background: #ff26262f;
     text-align: center;
 }
 
