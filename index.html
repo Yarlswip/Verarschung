@@ -7,41 +7,12 @@
     <script src="settings.js" defer></script>
 </head>
     <body>
-        <header class="fixed-header">
-             <div class="image-container">
-                <a href="/">
-                    <img src="media/blacklogo.png" alt="Homepage" height="60px">
-                </a>
-            </div>
-            <div class="image-container">
-                <a href="https://youtube.com/@YarlsWip">
-                    <img src="media/youtube.png" alt="Mein YouTube" height="60px">
-                </a>
-            </div>
-            <div class="image-container">
-                <a href="https://github.com/Yarlswip">
-                    <img src="media/github.png" alt="Mein Github" height="60px">
-                </a>
-            </div>
-            <div class="image-container">
-                <a href="https://x.com/kiserkaese">
-                    <img src="media/twitter.png" alt="Mein Twitter" height="60px">
-                </a>
-            </div>
-
-        <div class="image-container settings-container">
-            <button class="settings-btn" id="settingsBtn">
-                <img src="media/zahnrad.png" alt="Einstellungen" height="60px">
-            </button>
-            <div class="settings-menu" id="settingsMenu">
-                <ul>
-                    <li>Technisch</li>
-                    <li>Geschlossen</li>
-                    <li>Danke!</li>
-                </ul>
-            </div>
-        </div>
-        </header>
+        <div id="header"></div>
+            <script>
+                fetch("./ph/header.html")
+                .then(res => res.text())
+                .then(html => document.getElementById("header").innerHTML = html);
+            </script>
     <main>
         <hr>
             <div style="display: flex; align-items: center; justify-content: center;">
@@ -118,7 +89,7 @@
                 </div>
         </section>
 			<hr>
-			<h2>Collegium:</h2>
+			<h2>Collegium</h2>
 			<p><a href=https://l3p3.de>L3P3</a></p>
 			<p><a href=https://www.gym-hbm.de>Schule</a></p>
 			<hr>

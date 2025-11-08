@@ -6,28 +6,12 @@
 			<link rel="stylesheet" href="/style.css">
 	</head>
 	<body>
-			<header class="fixed-header">
-		<div class="image-container">
-			<a href="/">
-				<img src="../media/blacklogo.png" alt="Homepage" height="60px">
-			</a>
-		</div>
-		<div class="image-container">
-			<a href="https://youtube.com/@YarlsWip">
-				<img src="../media/youtube.png" alt="Mein YouTube" height="60px">
-			</a>
-		</div>
-		<div class="image-container">
-			<a href="https://github.com/Yarlswip">
-				<img src="../media/github.png" alt="Mein Github" height="60px">
-			</a>
-		</div>
-		<div class="image-container">
-			<a href="https://x.com/kiserkaese">
-				<img src="../media/twitter.png" alt="Mein Twitter" height="60px">
-			</a>
-		</div>
-	</header>
+		<div id="header"></div>
+        	<script>
+        		fetch("./ph/header.html")
+            	.then(res => res.text())
+            	.then(html => document.getElementById("header").innerHTML = html);
+        	</script>
 		<h1>Dies solltest du nicht sehen können...</h1>
 		<h1>Ich bin... Yarko!</h1>
 		<p>Ich kritzle Texte, versuche zu programmieren, interessiere mich für Geschichte und Geopolitik.</p>
