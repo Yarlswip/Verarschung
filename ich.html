@@ -3,15 +3,10 @@
 	<head>
 		<title>über mich</title>
 		<link rel="shortcut icon" href=/media/logo1.png>
-			<link rel="stylesheet" href="/style.css">
+			<link rel="stylesheet" href="/static/style.css">
 	</head>
 	<body>
-		<div id="header"></div>
-        	<script>
-        		fetch("./ph/header.html")
-            	.then(res => res.text())
-            	.then(html => document.getElementById("header").innerHTML = html);
-        	</script>
+		<?= service_require('templates').header ?>
 		<h1>Dies solltest du nicht sehen können...</h1>
 		<h1>Ich bin... Yarko!</h1>
 		<p>Ich kritzle Texte, versuche zu programmieren, interessiere mich für Geschichte und Geopolitik.</p>

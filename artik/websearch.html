@@ -2,16 +2,11 @@
 <html>
 <head>
 	<title>navi</title>
-	<link rel="stylesheet" href="../style.css">
-	<link rel="icon" href="../media/headlogo.png">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="icon" href="/media/headlogo.png">
 </head>
 <body>
-		<div id="header"></div>
-        	<script>
-        		fetch("/ph/header.html")
-            	.then(res => res.text())
-            	.then(html => document.getElementById("header").innerHTML = html);
-        	</script>
+	<?= service_require('templates').header ?>
 	<main>
 		<hr>
 		<h1>Web-Seiten Navigation</h1>
@@ -25,14 +20,14 @@
 					</td>
 				  <td style="padding-top: 0px;">
 					<h2>Meine Projekte</h2>
-					<p><a href="../Tests.html">Knöpfen-Tests</a></p>
+					<p><a href="/Tests.html">Knöpfen-Tests</a></p>
 					<p><a href="https://yarslwip.l3p3.de/scheisse">Panzer spielchen</a></p>
-					<p><a href="../Kurskreferendum.html">Free Kursk Volksrepublik</a></p>
+					<p><a href="/Kurskreferendum.html">Free Kursk Volksrepublik</a></p>
 				  </td>
 				  <td style="padding-left: 40px;">
 					<h2>Alte Projekte</h2>
-					<p><a href="../etwas.html">Trinker News</a></p>
-					<p><a href="../green.html">Grüne Seite</a></p>
+					<p><a href="/etwas.html">Trinker News</a></p>
+					<p><a href="/green.html">Grüne Seite</a></p>
 				  </td>
 				</tr>
 			  </table>

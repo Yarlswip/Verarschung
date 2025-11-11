@@ -2,16 +2,11 @@
 <html>
 <head>
     <title>Karteikarten</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <link rel="icon" href="/media/headlogo.png">
 </head>
 <body>
-            <div id="header"></div>
-            <script>
-                fetch("./ph/header.html")
-                .then(res => res.text())
-                .then(html => document.getElementById("header").innerHTML = html);
-            </script>
+    <?= service_require('templates').header ?>
     <h1>Karteikarten erstellen</h1>
 <div id="container">
 <div id="creator">

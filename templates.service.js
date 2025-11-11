@@ -1,6 +1,6 @@
-<script src="/ph/settings.js" defer></script>
+this.header = `
+<script src="/static/settings.js" defer></script>
 <header class="fixed-header">
-
     <div class="image-container">
         <a href="/">
             <img src="/media/blacklogo.png" alt="Homepage" height="60px">
@@ -37,4 +37,4 @@
             <li>Danke!</li>
         </ul>
     </div>
-</header>
+</header>`;

@@ -2,16 +2,11 @@
 <html>
 <head>
     <title>Meine Pläne für die Web-Seite</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../media/headlogo.png">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/media/headlogo.png">
 </head>
 <body>
-		<div id="header"></div>
-        	<script>
-        		fetch("/ph/header.html")
-            	.then(res => res.text())
-            	.then(html => document.getElementById("header").innerHTML = html);
-        	</script>
+	<?= service_require('templates').header ?>
     <main>
         <hr>
         <h1>Was in Zukunft gemacht werden soll:</h1>
