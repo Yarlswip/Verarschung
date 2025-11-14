@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Karteikarten</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="icon" href="/media/headlogo.png">
 </head>
+
 <body>
     <?= service_require('templates').header ?>
     <h1>Karteikarten erstellen</h1>
-<div id="container">
-<div id="creator">
-<h2>Karteikarte erstellen</h2>
-<input id="front" type="text" placeholder="Vorderseite (Frage)">
-<textarea id="back" placeholder="Rückseite (Antwort)"></textarea>
-<button id="add">Karte hinzufügen</button>
-</div>
+    <div id="container">
+        <div id="creator">
+            <h2>Karteikarte erstellen</h2>
+            <input id="front" type="text" placeholder="Vorderseite (Frage)">
+            <textarea id="back" placeholder="Rückseite (Antwort)"></textarea>
+            <button id="add">Karte hinzufügen</button>
+        </div>
 
 
-<div id="viewer">
-<h2>Lernmodus</h2>
-<div id="display">
-<div class="card" id="card">Keine Karten vorhanden</div>
-<p id="card-count"></p>
-</div>
-<button id="next">Nächste Karte</button>
-<button id="reset">Alle Karten löschen</button>
-</div>
-</div>
+        <div id="viewer">
+            <h2>Lernmodus</h2>
+            <div id="display">
+                <div class="card" id="card">Keine Karten vorhanden</div>
+                <p id="card-count"></p>
+            </div>
+            <button id="next">Nächste Karte</button>
+            <button id="reset">Alle Karten löschen</button>
+        </div>
+    </div>
 </body>
+
 </html>
