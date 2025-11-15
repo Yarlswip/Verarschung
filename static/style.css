@@ -256,6 +256,7 @@ button {
 
 button:hover { background: #7a1111; }
 .card {
+    color: #333;
     background: whitesmoke;
     padding: 20px;
     border-radius: 8px;
