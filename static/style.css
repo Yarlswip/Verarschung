@@ -237,3 +237,37 @@ a:link, a:visited {
 .settings-menu.show {
     display: block;
 }
+
+input, textarea, button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    background: #ff2626;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover { background: #7a1111; }
+.card {
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    user-select: none;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff2626;
+}
+
+#card-count { margin-top: 10px; font-size: 0.9rem; color: #555; }

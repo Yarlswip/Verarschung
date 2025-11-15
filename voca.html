@@ -9,10 +9,11 @@
 
 <body>
     <?= service_require('templates').header ?>
+    <hr>
     <h1>Karteikarten erstellen</h1>
+    <hr>
     <div id="container">
         <div id="creator">
-            <h2>Karteikarte erstellen</h2>
             <input id="front" type="text" placeholder="Vorderseite (Frage)">
             <textarea id="back" placeholder="Rückseite (Antwort)"></textarea>
             <button id="add">Karte hinzufügen</button>
@@ -29,6 +30,65 @@
             <button id="reset">Alle Karten löschen</button>
         </div>
     </div>
+
+    <script>
+        let cards = JSON.parse(localStorage.getItem("flashcards")) || [];
+        let index = 0;
+        let flipped = false;
+
+        const cardEl = document.getElementById("card");
+        const countEl = document.getElementById("card-count");
+
+        function updateDisplay() {
+        if (cards.length === 0) {
+        cardEl.textContent = "Keine Karten vorhanden";
+        countEl.textContent = "";
+        return;
+        }
+        const card = cards[index];
+        cardEl.textContent = flipped ? card.back : card.front;
+        countEl.textContent = `Karte ${index + 1} von ${cards.length}`;
+        }
+
+        updateDisplay();
+
+        cardEl.addEventListener("click", () => {
+        flipped = !flipped;
+        updateDisplay();
+        });
+        document.getElementById("next").addEventListener("click", () => {
+
+        if (cards.length === 0) return;
+        index = (index + 1) % cards.length;
+        flipped = false;
+        updateDisplay();
+        });
+
+
+        document.getElementById("add").addEventListener("click", () => {
+        const front = document.getElementById("front").value.trim();
+        const back = document.getElementById("back").value.trim();
+        if (!front || !back) return;
+        cards.push({ front, back });
+        localStorage.setItem("flashcards", JSON.stringify(cards));
+        document.getElementById("front").value = "";
+        document.getElementById("back").value = "";
+        index = cards.length - 1;
+        flipped = false;
+        updateDisplay();
+        });
+
+
+        document.getElementById("reset").addEventListener("click", () => {
+        if (confirm("Alle Karten wirklich löschen?")) {
+        cards = [];
+        localStorage.removeItem("flashcards");
+        index = 0;
+        flipped = false;
+        updateDisplay();
+        }
+        });
+    </script>
 </body>
 
 </html>
