@@ -230,13 +230,15 @@ a:link, a:visited {
 
 .vacuum {
   position: relative;
-  width: 1915px;
-  height: 300px;
+  width: 95vw;
+  max-width: 1915px;
+  height: 40vw;
+  max-height: 300px;
   border: 2px solid #00000000;
   overflow: hidden;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .vacuum li {
