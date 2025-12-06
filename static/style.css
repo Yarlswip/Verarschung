@@ -35,16 +35,6 @@ header {
   border-bottom: 1px solid whitesmoke
 }
 
-ul {
-  columns: 3;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  padding: 4px 0;
-}
-
 main {
   margin-top: 60px;
 }
@@ -236,6 +226,27 @@ a:link, a:visited {
 
 .settings-menu.show {
     display: block;
+}
+
+.vacuum {
+  position: relative;
+  width: 1915px;
+  height: 300px;
+  border: 2px solid #924141a8;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vacuum li {
+  position: absolute;
+  background: #ff2626;
+  padding: 10px 15px;
+  border-radius: 6px;
+  user-select: none;
+  top: 0;
+  left: 0;
 }
 
 input, textarea, button {
