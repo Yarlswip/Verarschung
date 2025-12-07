@@ -1,0 +1,7 @@
+farben codes:
+
+rot: #ff2626
+grau/schwarz: #191919
+
+blau: #04466F
+gelb: #B8840A

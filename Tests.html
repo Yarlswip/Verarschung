@@ -10,19 +10,28 @@
 <button id="colorButton">Farbe ändern</button>
 
 <script>
-    // JavaScript-Code
     const colorButton = document.getElementById('colorButton');
-    const colors = ["red", "blue", "green", "orange", "purple"];
-    let currentColorIndex = 0;
+
+    // Hintergrund: rot/gelb
+    const bgColors = ["red", "yellow"];
+    let bgIndex = 0;
+
+    // Header: rot/blau
+    const headerColors = ["red", "blue"];
+    let headerIndex = 0;
+
+    const header = document.querySelector('header'); // <header> muss existieren
 
     colorButton.addEventListener('click', () => {
-        document.body.style.backgroundColor = colors[currentColorIndex];
-        currentColorIndex = (currentColorIndex + 1) % colors.length;
+        document.body.style.backgroundColor = bgColors[bgIndex];
+        header.style.backgroundColor = headerColors[headerIndex];
+
+        bgIndex = (bgIndex + 1) % bgColors.length;
+        headerIndex = (headerIndex + 1) % headerColors.length;
     });
 </script>
 		
 		<footer>
 			<p><a href=/index.html>Zurück</a></p>
 		</footer>
-
   </body>
