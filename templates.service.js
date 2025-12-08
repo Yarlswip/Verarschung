@@ -35,21 +35,24 @@ this.header = `
             <button id="colorButton">Dark/Light Mode</button>
     <script>
         const colorButton = document.getElementById('colorButton');
-
-        const bgColors = ["#191919", "#B8840A"];
-        let bgIndex = 0;
-
-        const headerColors = ["#ff2626", "#04466F"];
-        let headerIndex = 0;
-
         const header = document.querySelector('header');
 
-        colorButton.addEventListener('click', () => {
-            document.body.style.backgroundColor = bgColors[bgIndex];
-            header.style.backgroundColor = headerColors[headerIndex];
+        const bgColors = ["#191919", "#B8840A"];
+        const headerColors = ["#ff2626", "#04466F"];
 
-            bgIndex = (bgIndex + 1) % bgColors.length;
-            headerIndex = (headerIndex + 1) % headerColors.length;
+        let themeIndex = Number(localStorage.getItem("themeIndex")) || 0;
+
+        function applyTheme(index) {
+            document.body.style.backgroundColor = bgColors[index];
+            header.style.backgroundColor = headerColors[index];
+        }
+
+        applyTheme(themeIndex);
+
+        colorButton.addEventListener('click', () => {
+            themeIndex = (themeIndex + 1) % bgColors.length;
+            localStorage.setItem("themeIndex", themeIndex);
+            applyTheme(themeIndex);
         });
     </script>
         </ul>
