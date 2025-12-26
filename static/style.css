@@ -228,6 +228,16 @@ a:link, a:visited {
     display: block;
 }
 
+.listen-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.liste {
+    text-align: left;
+}
+
 .vacuum {
   position: relative;
   width: 95vw;
