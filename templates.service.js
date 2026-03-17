@@ -3,31 +3,31 @@ this.header = `
 <header class="fixed-header">
     <div class="image-container">
         <a href="/">
-            <img src="/media/blacklogo.png" alt="Homepage" height="60px">
+            <img src="/media/blacklogo.png" alt="Homepage" height="120px">
         </a>
     </div>
 
     <div class="image-container">
         <a href="https://youtube.com/@YarlsWip">
-            <img src="/media/youtube.png" alt="Mein YouTube" height="60px">
+            <img src="/media/youtube.png" alt="Mein YouTube" height="120px">
         </a>
     </div>
 
     <div class="image-container">
         <a href="https://github.com/Yarlswip">
-            <img src="/media/github.png" alt="Mein Github" height="60px">
+            <img src="/media/github.png" alt="Mein Github" height="120px">
         </a>
     </div>
 
     <div class="image-container">
         <a href="https://x.com/kiserkaese">
-            <img src="/media/twitter.png" alt="Mein Twitter" height="60px">
+            <img src="/media/twitter.png" alt="Mein Twitter" height="120px">
         </a>
     </div>
 
     <div class="image-container settings-container">
         <button class="settings-btn" id="settingsBtn">
-            <img src="/media/zahnrad.png" alt="Einstellungen" height="60px">
+            <img src="/media/zahnrad.png" alt="Einstellungen" height="120px">
         </button>
     </div>
     <div class="settings-menu" id="settingsMenu">
