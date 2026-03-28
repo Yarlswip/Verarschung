@@ -30,9 +30,15 @@ body {
   transition: background-color .3s ease, color .3s ease;
 }
 
-h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 700; letter-spacing: .02em; }
-h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 500; }
-h3 { font-size: 1rem; font-weight: 500; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 700; letter-spacing: .02em; margin: 1.2rem 0 .6rem; }
+h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 500; margin: 1rem 0 .5rem; }
+h3 { font-size: 1rem; font-weight: 500; margin: .85rem 0 .4rem; }
+
+p { margin: 0 0 1rem; }
+hr { margin: 1.25rem auto; border: 1px solid rgba(255,255,255,.16); }
+footer { margin: 1.5rem 0 .75rem; }
+
+body { padding: 1rem; }
 
 a:link, a:visited { color: var(--link); text-underline-offset: 3px; }
 a:hover { color: #fff; }

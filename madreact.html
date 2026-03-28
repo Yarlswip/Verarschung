@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <title>MadReaktionstest</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+    #box {
+      width: 300px;
+      height: 200px;
+      margin: 20px auto;
+      background-color: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <?= service_require('templates').header ?>
+    <h1>MadReaktionstest</h1>
+    <p>Klicke so schnell wie möglich, wenn es grün wird!</p>
+    <div id="box">Start</div>
+    <p id="result"></p>
+
+    <script>
+        let startTime;
+        let waiting = false;
+
+        const box = document.getElementById("box");
+        const result = document.getElementById("result");
+
+        box.onclick = function() {
+        if (!waiting) {
+            box.textContent = "Warte!";
+            box.style.backgroundColor = "orange";
+            result.textContent = "Du musst warten!";
+
+            waiting = true;
+
+            let delay = Math.random() * 3000 + 2000;
+
+            setTimeout(() => {
+            box.style.backgroundColor = "green";
+            box.textContent = "JETZT!";
+            startTime = Date.now();
+            }, delay);
+
+        } else {
+            if (box.style.backgroundColor === "green") {
+            let reactionTime = Date.now() - startTime;
+            let bewertung = "";
+
+            if (reactionTime < 100) {
+                bewertung = "Hör auf das Knopf zu Spammen, ich weiß selber das die Seite verbuggt ist, Arschloch...";
+            } else if (reactionTime < 200) {
+                bewertung = "Mach dein Autoclicker aus, du Cheater!";
+            } else if (reactionTime < 300) {
+                bewertung = "Zu langsam, Lappen!";
+            } else if (reactionTime < 400) {
+                bewertung = "Meine Oma ist schneller als du!";
+            } else {
+                bewertung = "Aufwachen, Penner!";
+            }
+
+            result.innerHTML = reactionTime + " ms<br>" + bewertung;
+            } else {
+            result.textContent = "Zu früh geklickt, Idiot.";
+            }
+
+            box.style.backgroundColor = "red";
+            box.textContent = "START";
+            waiting = false;
+        }
+        };
+    </script>
+
+  <hr>
+  <p>P.S. Satire, keiner sollte beleidigt werden, Ihr seid gewarnt!</p>
+  <hr>
+  <footer>
+    <p>©2026</p>
+  </footer>
+  <hr>
+</body>
+</html>
