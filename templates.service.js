@@ -19,12 +19,6 @@ this.header = `
         </a>
     </div>
 
-    <div class="image-container">
-        <a href="https://x.com/kiserkaese">
-            <img src="/media/twitter.png" alt="Mein Twitter" height="120px">
-        </a>
-    </div>
-
     <div class="image-container settings-container">
         <button class="settings-btn" id="settingsBtn">
             <img src="/media/zahnrad.png" alt="Einstellungen" height="120px">
