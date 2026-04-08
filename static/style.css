@@ -63,6 +63,19 @@ header {
   z-index: 1000;
 }
 
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header-socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 main { margin-top: calc(var(--header-h) + 16px); }
 
 .image-container {
