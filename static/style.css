@@ -7,11 +7,11 @@
   --bg3:#2a2a2a;
   --fg: whitesmoke;
   --fg2:#a0a0a0;
-  --border: rgba(255,255,255,.15); /* ← neu */
+  --border: rgba(255,255,255,.15);
   --link:#a6f2fc;
   --radius:8px;
   --trans: .22s cubic-bezier(.4,0,.2,1);
-  --header-h: 70px;
+  --header-h: 80px;
   --shadow:0 4px 20px rgba(0,0,0,.5);
 }
 
@@ -46,8 +46,6 @@ a:hover { color: #fff; }
 
 header {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 4px;
   padding: 0 12px;
@@ -68,20 +66,23 @@ header {
 main { margin-top: calc(var(--header-h) + 16px); }
 
 .image-container {
+  position: relative;
+  top: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px; height: 52px;
+  width: 70px; height: 70px;
   border-radius: var(--radius);
   transition: background var(--trans), transform var(--trans);
 }
+
 .image-container:hover {
   background: rgba(255,255,255,.18);
   transform: translateY(-2px);
 }
 .image-container img {
-  max-width: 36px;
-  max-height: 36px;
+  max-width: 67px;
+  max-height: 67px;
   width: auto; height: auto;
   transition: transform var(--trans);
 }
@@ -101,12 +102,12 @@ main { margin-top: calc(var(--header-h) + 16px); }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px; height: 52px;
+  width: 67px; height: 67px;
   border-radius: var(--radius);
   transition: background var(--trans);
 }
 .settings-btn:hover { background: rgba(255,255,255,.18); }
-.settings-btn img { width: 32px; height: 32px; }
+.settings-btn img { width: 67px; height: 67px; }
 
 .settings-menu {
   display: none;
