@@ -50,7 +50,7 @@ this.header = `
       applyTheme(themeIndex);
     });
   <\/script>
-</header>
+</header>`;
 
 this.article = `
 		<section class="artikel-leiste">
