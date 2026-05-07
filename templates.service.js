@@ -51,32 +51,6 @@ this.header = `
     });
   <\/script>
 </header>
-  <main>
-    <hr>
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <h1 id="textanim" style="font-size:50px; margin:0;"></h1>
-      <img src="/media/logoleft.png" alt="Logo" class="slide-in-image" id="logo"
-        style="height:250px; margin-left:20px;">
-    </div>
-    <script>
-      const el = document.getElementById("textanim");
-      const text = "WILLKOMMEN\nBEI";
-      let i = 0;
-      const speed = 77;
-
-      function typeWriter() {
-        if (i < text.length) {
-          const ch = text.charAt(i++);
-          el.innerHTML += (ch === "\n") ? "<br>" : ch;
-          setTimeout(typeWriter, speed);
-        } else {
-          el.classList.add("slide-in-text");
-          document.getElementById("logo").classList.add("visible");
-        }
-      }
-
-      typeWriter();
-    <\/script>`;
 
 this.article = `
 		<section class="artikel-leiste">
