@@ -1,55 +1,56 @@
 this.header = `
-  <script src="/static/settings.js" defer><\/script>
+	<script src="/static/settings.js" defer></script>
 <header class="fixed-header">
-
-  <div class="header-inner">
+    <div class="image-container">
+        <a href="/">
+            <img src="/media/blacklogo.png" alt="Homepage" height="120px">
+        </a>
+    </div>
 
     <div class="image-container">
-      <a href="/">
-        <img src="/media/blacklog.png" style="max-width:80px; height:auto;">
-      </a>
+        <a href="https://youtube.com/@YarlsWip">
+            <img src="/media/youtube.png" alt="Mein YouTube" height="120px">
+        </a>
     </div>
 
-    <div class="header-socials">
-      <a href="https://youtube.com/@YarlsWip">
-        <img src="/media/youtube.png" alt="Mein YouTube" height="60px">
-      </a>
-      <a href="https://github.com/Yarlswip">
-        <img src="/media/github.png" alt="Mein Github" height="60px">
-      </a>
+    <div class="image-container">
+        <a href="https://github.com/Yarlswip">
+            <img src="/media/github.png" alt="Mein Github" height="120px">
+        </a>
     </div>
 
+    <div class="image-container settings-container">
+        <button class="settings-btn" id="settingsBtn">
+            <img src="/media/zahnrad.png" alt="Einstellungen" height="120px">
+        </button>
+    </div>
     <div class="settings-menu" id="settingsMenu">
       <ul>
-        <li><button id="colorButton">Dark/Light Mode</button></li>
-      </ul>
+            <button id="colorButton">Dark/Light Mode</button>
+    <script>
+        const colorButton = document.getElementById('colorButton');
+        const header = document.querySelector('header');
+
+        const bgColors = ["#191919", "#B8840A"];
+        const headerColors = ["#ff2626", "#04466F"];
+
+        let themeIndex = Number(localStorage.getItem("themeIndex")) || 0;
+
+        function applyTheme(index) {
+            document.body.style.backgroundColor = bgColors[index];
+            header.style.backgroundColor = headerColors[index];
+        }
+
+        applyTheme(themeIndex);
+
+        colorButton.addEventListener('click', () => {
+            themeIndex = (themeIndex + 1) % bgColors.length;
+            localStorage.setItem("themeIndex", themeIndex);
+            applyTheme(themeIndex);
+        });
+    </script>
+        </ul>
     </div>
-
-  </div>
-
-  <script>
-    const colorButton = document.getElementById('colorButton');
-    const header = document.querySelector('header');
-
-    const bgColors = ["#191919", "#B8840A"];
-    const headerColors = ["#ff2626", "#04466F"];
-
-    const stored = localStorage.getItem("themeIndex");
-    let themeIndex = stored !== null ? Number(stored) : 0;
-
-    function applyTheme(index) {
-      document.body.style.backgroundColor = bgColors[index];
-      header.style.backgroundColor = headerColors[index];
-    }
-
-    applyTheme(themeIndex);
-
-    colorButton.addEventListener('click', () => {
-      themeIndex = (themeIndex + 1) % bgColors.length;
-      localStorage.setItem("themeIndex", themeIndex);
-      applyTheme(themeIndex);
-    });
-  <\/script>
 </header>`;
 
 this.article = `

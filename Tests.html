@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="de">
-
-<head>
-	<title>YarlsWIP</title>
-	<link rel="stylesheet" href="/static/style.css">
-	<link rel="icon" href="/media/headlogo.png">
-</head>
-
-<body>
-	<script src="/static/settings.js" defer></script>
+<html>
+    <head>
+        <title>Tests</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="icon" href="/media/headlogo.png">
+    </head>
+    <body>
+this.header = `
+<script src="/static/settings.js" defer></script>
 <header class="fixed-header">
     <div class="image-container">
         <a href="/">
-            <img src="/media/blacklog.png" style="max-width:80px; height:auto;">
+            <img src="/media/blacklogo.png" alt="Homepage" height="120px">
         </a>
     </div>
 
-    <div class="image-container" style="position: relative; left: 1550px;">
+    <div class="image-container">
         <a href="https://youtube.com/@YarlsWip">
             <img src="/media/youtube.png" alt="Mein YouTube" height="120px">
         </a>
     </div>
 
-    <div class="image-container" style="position: relative; left: 1570px;">
+    <div class="image-container">
         <a href="https://github.com/Yarlswip">
             <img src="/media/github.png" alt="Mein Github" height="120px">
         </a>
@@ -61,44 +60,5 @@
         </ul>
     </div>
 </header>
-	<main>
-		<hr>
-		<div style="display: flex; align-items: center; justify-content: center;">
-			<h1 id="textanim" style="font-size:50px; margin:0;"></h1>
-			<img src="/media/logoleft.png" alt="Logo" class="slide-in-image" id="logo"
-				style="height:250px; margin-left:20px;">
-		</div>
-		<script>
-			const el = document.getElementById("textanim");
-			const text = "WILLKOMMEN\nBEI";
-			let i = 0;
-			const speed = 77;
-
-			function typeWriter() {
-				if (i < text.length) {
-					const ch = text.charAt(i++);
-					el.innerHTML += (ch === "\n") ? "<br>" : ch;
-					setTimeout(typeWriter, speed);
-				} else {
-					el.classList.add("slide-in-text");
-					document.getElementById("logo").classList.add("visible");
-				}
-			}
-
-			typeWriter();
-		</script>
-	<div class="section-label">Projecte</div>
-		<?= service_require('templates').projects ?>
-    <div class="section-label">Artikeln</div>
-		<?= service_require('templates').articles ?>
-		
-	<div class="section-label">Kollegium</div>
-		<p><a href="https://l3p3.de">L3P3</a></p>
-		<p><a href="https://www.gym-hbm.de">Schule</a></p>
-		<hr>
-	</main>
-	<footer>
-		<p>©2026</p>
-	</footer>
-</body>
-</html>
+    </body>
+</html>>
