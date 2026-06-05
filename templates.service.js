@@ -24,6 +24,11 @@ this.header = `
             <img src="/media/zahnrad.png" alt="Einstellungen" height="120px">
         </button>
     </div>
+    <div class="image-container settings-container">
+        <button class="settings-btn" id="settingsBtn">
+            <img src="/media/zahnrad.png" alt="Einstellungen" height="120px">
+        </button>
+    </div>
     <div class="settings-menu" id="settingsMenu">
       <ul>
             <button id="colorButton">Dark/Light Mode</button>
