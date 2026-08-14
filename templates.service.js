@@ -19,43 +19,42 @@ this.header = `
         </a>
     </div>
 
-    <div class="image-container settings-container">
-        <button class="settings-btn" id="settingsBtn">
-            <img src="/media/zahnrad.png" alt="Einstellungen" height="120px">
-        </button>
-    </div>
-    <div class="image-container settings-container">
-        <button class="settings-btn" id="settingsBtn">
-            <img src="/media/zahnrad.png" alt="Einstellungen" height="120px">
-        </button>
-    </div>
-    <div class="settings-menu" id="settingsMenu">
-      <ul>
-            <button id="colorButton">Dark/Light Mode</button>
-    <script>
-        const colorButton = document.getElementById('colorButton');
-        const header = document.querySelector('header');
+	<div class="image-container settings-container">
+		<button class="settings-btn" id="settingsBtn">
+			<img src="/media/zahnrad.png" alt="Einstellungen" height="120">
+		</button>
+	</div>
 
-        const bgColors = ["#191919", "#B8840A"];
-        const headerColors = ["#ff2626", "#04466F"];
+	<div class="settings-menu" id="settingsMenu">
+		<ul>
+			<li><button id="colorButton">Dark/Light Mode</button></li>
+		</ul>
+	</div>
 
-        let themeIndex = Number(localStorage.getItem("themeIndex")) || 0;
+	<script>
+		const colorButton = document.getElementById('colorButton');
+		const header = document.querySelector('header');
 
-        function applyTheme(index) {
-            document.body.style.backgroundColor = bgColors[index];
-            header.style.backgroundColor = headerColors[index];
-        }
+		const bgColors = ["#191919", "#B8840A"];
+		const headerColors = ["#ff2626", "#04466F"];
 
-        applyTheme(themeIndex);
+		let themeIndex = Number(localStorage.getItem("themeIndex")) || 0;
 
-        colorButton.addEventListener('click', () => {
-            themeIndex = (themeIndex + 1) % bgColors.length;
-            localStorage.setItem("themeIndex", themeIndex);
-            applyTheme(themeIndex);
-        });
-    </script>
-        </ul>
-    </div>
+		function applyTheme(index) {
+			document.body.style.backgroundColor = bgColors[index];
+			if (header) {
+				header.style.backgroundColor = headerColors[index];
+			}
+		}
+
+		applyTheme(themeIndex);
+
+		colorButton.addEventListener('click', () => {
+			themeIndex = (themeIndex + 1) % bgColors.length;
+			localStorage.setItem("themeIndex", themeIndex);
+			applyTheme(themeIndex);
+		});
+	</script>
 </header>`;
 
 this.article = `
