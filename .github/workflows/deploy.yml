@@ -13,4 +13,4 @@ jobs:
     - name: update
       run: |
         echo "::add-mask::${{ secrets.UPDATE_KEY }}"
-        curl -X POST -d "site=y4r3&key=${{ secrets.UPDATE_KEY }}" https://l3p3.de/svr/site-update.txt
+        curl  --fail-with-body --show-error -X POST -d "key=${{ secrets.UPDATE_KEY }}" https://yarlswip.l3p3.de/site-update.txt
