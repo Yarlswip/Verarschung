@@ -23,7 +23,7 @@ html, body {
 }
 
 body {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-family: 'Inter', sans-serif;
   background-color: var(--bg);
   color: var(--fg);
   text-align: center;

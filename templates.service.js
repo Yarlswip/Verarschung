@@ -1,9 +1,4 @@
 this.header = `
-	const script = document.createElement('script');
-	script.src = '/static/settings.js';
-	script.defer = true;
-	document.body.appendChild(script);
-
 <header class="fixed-header">
     <div class="image-container">
         <a href="/">
